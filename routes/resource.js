@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const path = "/input";
+const path = "tmp/input";
 
 router.get('/', function(req, res) {
+  console.log("path = ", path);
   fs.readFile(path, 'utf8', function(err, contents) {
     if (err){
       res.send();
