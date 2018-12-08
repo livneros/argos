@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const os = require('os');
-const path = os.homedir() + "/input";
+const path = "/input";
 
 router.get('/', function(req, res) {
   fs.readFile(path, 'utf8', function(err, contents) {
